@@ -1,0 +1,392 @@
+plain message
+
+{
+  "object": "page",
+  "entry": [{
+    "id": "365791057222672",
+    "time": 1522569371815,
+    "messaging": [{
+      "sender": {
+        "id": "1417350515040938"
+      },
+      "recipient": {
+        "id": "365791057222672"
+      },
+      "timestamp": 1522569371676,
+      "message": {
+        "mid": "mid.$cAAEWWqt6es5osXooHFigDNunq8Md",
+        "seq": 74902,
+        "text": "hi"
+      }
+    }]
+  }]
+}
+
+list options
+//completed
+
+{
+  "object": "page",
+  "entry": [{
+    "id": "365791057222672",
+    "time": 1522569423764,
+    "messaging": [{
+      "recipient": {
+        "id": "365791057222672"
+      },
+      "timestamp": 1522569423764,
+      "sender": {
+        "id": "1417350515040938"
+      },
+      "postback": {
+        "payload": "BlueMed, Bonzo White Shoe Covers",
+        "title": "BlueMed, Bonzo White..."
+      }
+    }]
+  }]
+}
+
+
+quick_replies 
+
+
+
+{
+  "object": "page",
+  "entry": [{
+    "id": "365791057222672",
+    "time": 1522573969177,
+    "messaging": [{
+      "sender": {
+        "id": "1417350515040938"
+      },
+      "recipient": {
+        "id": "365791057222672"
+      },
+      "timestamp": 1522573969029,
+      "message": {
+        "quick_reply": {
+          "payload": "Medium"
+        },
+        "mid": "mid.$cAAEWWqt6es5oscBOhVigHsEpq5H5",
+        "seq": 74956,
+        "text": "Medium"
+      }
+    }]
+  }]
+}
+
+
+{
+  "object": "page",
+  "entry": [{
+  "id": "1208861125911410",
+  "time": 1522570125874,
+  "messaging": [{
+    "sender": {
+      "id": "1417350515040938"
+    },
+    "recipient": {
+      "id": "365791057222672"
+    },
+    "timestamp": 1522570125805,
+    "message": {
+      "mid": "mid.$cAAEWWqt6es5osYWp7VigEBSoWWcG",
+      "seq": 74933,
+      "attachments": [{
+        "type": "image",
+        "payload": {
+          "url": "https://scontent-dfw5-1.xx.fbcdn.net/v/t34.0-12/29751074_403941913363543_1525226563_n.jpg?_nc_cat=0&_nc_ad=z-m&_nc_cid=0&oh=60c61e983e48e7360b4a4f7217d563d4&oe=5AC33D56"
+        }
+      }]
+    }
+  }]
+}]
+}
+
+
+
+
+
+
+
+
+100014842334219
+
+
+apiaitestcode@gmail.com
+
+Welcome1#
+
+scs-bot messenger token EAAEfvcbaaMQBAJe31ZAcTZB93Dq3E7eCa1GZAWkG765GPox5QUUC4JkIe1Sb6k7wmYyOK9jkOy2lSiboGBnzrPyyQy3LXgpqdevzC07t1AVbvC7wKgfQ7YMLgVprerd6tHPsoa9rEKhE7BlvFM7GdxgQs9dTdwfEQYigMe5WeMlCRVPFJN0
+
+
+
+
+
+
+
+
+
+to make fb live
+
+1. settings -> basic settings 
+		--provide policy url and app icon
+2. Goto App review -> make UAT Public
+
+
+
+
+
+--action request body structure
+
+
+{
+	"service_type": "[JSON|FORM_DATA|X_URL_FORM_ENCODED]",
+	"headers": {	(Map)		
+			"Content-Type": "application/x-www-form-urlencoded",		
+			"Authorization": "Bearer lkdfjdzsgkuhdgodr4erer"		
+	,
+	"req_body": {
+		"request_string": {   //For JSON Service Type
+			"transfer": {
+				"amount": "% 2 %",
+				"mobileno": "%3%"
+			}
+		},
+		"req_body_params": [{ // For FORM_DATA|X_URL_FORM_ENCODED
+			"entitykey": "file",
+			"entityvalue": "%3% (it is entity files)",
+			"importType": "FILE"
+		}]
+	}
+}
+
+
+-- form data type
+
+{
+	"service_type": "FORM_DATA",
+	"headers": {
+		"Content-Type": "multipart/form-data"
+		},
+	"req_body": {		
+		"req_body_params": [
+			{
+				"entitykey": "file",
+				"entityvalue": "%23%",
+				"importType": "FILE"
+			},
+			{
+				"entitykey": "file1",
+				"entityvalue": "%24%",
+				"importType": "FILE"
+			},
+			{
+				"entitykey": "fname",
+				"entityvalue": "%25%",
+				"importType": "TEXT"
+			},
+			{
+				"entitykey": "lname",
+				"entityvalue": "%26%",
+				"importType": "TEXT"
+			}
+		]
+	}
+}
+-- x url encoded type
+
+{
+	"service_type": "X_URL_FORM_ENCODED",
+	"headers": {
+		"Content-Type": "application/x-www-form-urlencoded",
+		"Authorization": "Basic Z21KSFJlMEJxQ1pMQThrT1F6QktQbW14d2pIRW91MVNacDNMYjZLMDozdXVjUndhZHFQUmNxYlVRTzNyRmVMUWVyemU4M1pHNG1ueUFGek1T"
+		},
+	"req_body": {		
+		"req_body_params": [
+			{
+				"entitykey": "grant_type",
+				"entityvalue": "client_credentials"
+			}
+		]
+	}
+}
+
+-- for json type
+
+
+
+{"service_type": "JSON","headers": {"Content-Type": "application/json"	},"req_body": {"request_string": "{\"authCode\": \"[AccessCode]\"}"	}}
+
+
+entity listing with image sample json structure
+
+
+{
+	"message": {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "generic",
+        "elements": [{
+          "title": "JAGUAR XF",
+          "subtitle": "2018 - F DUBAI 3",
+          "image_url": "https://cdn.raffine.eu/api/v1/image/6800/w/910.jpg",
+          "buttons": [{
+            "type": "postback",
+            "title": "JAGUAR XF",
+            "payload": "JAGUAR XF"
+          }]
+        }, {
+          "title": "Range Rover Evoque",
+          "subtitle": "2018 - S DUBAI 1",
+          "image_url": "https://assets.gocar.be/picserver1/userdata/1/26513/VnjRxhgqF/kfz47733759_883725836-1.jpg",
+          "buttons": [{
+            "type": "postback",
+            "title": "Range Rover Evoque",
+            "payload": "Range Rover Evoque"
+          }]
+        }, {
+          "title": "Range Rover Sport",
+          "subtitle": "2018 - DUBAI 5",
+          "image_url": "https://car-images.bauersecure.com/pagefiles/76727/rr_sport_my2018_01.jpg",
+          "buttons": [{
+            "type": "postback",
+            "title": "Range Rover Sport",
+            "payload": "Range Rover Sport"
+          }]
+        }]
+      }
+    }
+  }
+  
+  }
+
+
+sample quick reply json structure
+
+
+{"text":"email: akhil@gmail.com","quick_replies":[{"content_type":"text","title":"Continue","payload":"Continue"},{"content_type":"text","title":"Change","payload":"Change"}]}
+
+
+
+
+
+
+
+
+
+{
+  "recipient": {
+    "id": "1617852384959666"
+  },
+  "message": {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "generic",
+        "elements": [{
+          "title": "JAGUAR XF",
+          "subtitle": "2018 - F DUBAI 3",
+          "image_url": "https://cdn.raffine.eu/api/v1/image/6800/w/910.jpg",
+          "buttons": [{
+            "type": "postback",
+            "title": "JAGUAR XF",
+            "payload": "JAGUAR XF"
+          }]
+        }, {
+          "title": "Range Rover Evoque",
+          "subtitle": "2018 - S DUBAI 1",
+          "image_url": "https://assets.gocar.be/picserver1/userdata/1/26513/VnjRxhgqF/kfz47733759_883725836-1.jpg",
+          "buttons": [{
+            "type": "postback",
+            "title": "Range Rover Evoque",
+            "payload": "Range Rover Evoque"
+          }]
+        }, {
+          "title": "Range Rover Sport",
+          "subtitle": "2018 - DUBAI 5",
+          "image_url": "https://car-images.bauersecure.com/pagefiles/76727/rr_sport_my2018_01.jpg",
+          "buttons": [{
+            "type": "postback",
+            "title": "Range Rover Sport",
+            "payload": "Range Rover Sport"
+          }]
+        }]
+      }
+    }
+  }
+}
+
+
+{
+  "recipient": {
+    "id": "1617852384959666"
+  },
+  "message": {
+    "text": "I need the date , can you select  from the list",
+    "quick_replies": [{
+      "content_type": "text",
+      "title": "17 APR",
+      "payload": "17 APR"
+    }, {
+      "content_type": "text",
+      "title": "16 APR",
+      "payload": "16 APR"
+    }, {
+      "content_type": "text",
+      "title": "15 APR",
+      "payload": "15 APR"
+    }, {
+      "content_type": "text",
+      "title": "12 APR",
+      "payload": "12 APR"
+    }, {
+      "content_type": "text",
+      "title": "11 APR",
+      "payload": "11 APR"
+    }]
+  }
+}
+
+
+
+{
+  "recipient": {
+    "id": "1617852384959666"
+  },
+  "message": {
+    "text": "Here you go; your booking reference number is 1234567. One of our Service Adviser will get in touch before the booked date."
+  }
+}
+
+
+
+--purist chat request body
+{
+	"event": "message",
+	"conversation_id": 754,
+	"support_catagory_id": 1,
+	"support_catagory_name": "General",
+	"operator_id": null,
+	"operator_name": null,
+	"end_customer_id": 6,
+	"end_customer_name": "user1",
+	"body": <message>,
+	"file_url": null
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

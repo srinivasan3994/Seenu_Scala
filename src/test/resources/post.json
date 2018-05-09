@@ -1,0 +1,58 @@
+Sample Json Request from Facebook :
+
+{
+  "object": "page",
+  "entry": [
+    {
+      "id": "1273566346065018",
+      "time": 1490682491699,
+      "messaging": [
+        {
+          "sender": {
+            "id": "1092945050811598"
+          },
+          "recipient": {
+            "id": "1273566346065018"
+          },
+          "timestamp": 1490682491649,
+          "message": {
+            "mid": "mid.$cAATcu8CB-HFhRN77AVbE5m5Y0iKS",
+            "seq": 3430,
+            "text": "Hello"
+          }
+        }
+      ]
+    }
+  ]
+}
+
+Sample Json Response to Facebook :
+
+{
+ "recipient": {
+   "id": "1092945050811598"
+ },
+ "message": {
+   "text": "Hi, how may help you"
+ }
+}
+
+Sample Confirmation Json Response to Facebook :
+
+{
+ "recipient": {
+   "id": "1092945050811598"
+ },
+ "message": {
+   "text": "Do you want to cancel the MePay?",
+   "quick_replies": [{
+     "content_type": "text",
+     "title": "Yes",
+     "payload": "yes"
+   }, {
+     "content_type": "text",
+     "title": "No",
+     "payload": "no"
+   }]
+ }
+}
